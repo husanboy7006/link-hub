@@ -1,0 +1,59 @@
+{
+  "name": "Dasturchi Husan",
+  "bio": "Python o'rganuvchisi va AI qiziquvchisiman. Bu yerda mening ilk loyihalarim va ijtimoiy tarmoqlardagi sahifalarim jamlangan.",
+  "profile_image": "static/profile_logo.png",
+  "links": [
+    {
+      "title": "Telegram Kanalim",
+      "url": "#",
+      "icon": "fab fa-telegram",
+      "description": "Eng so'nggi yangiliklar va foydali postlar.",
+      "color": "blue",
+      "active": false
+    },
+    {
+      "title": "Instagram",
+      "url": "#",
+      "icon": "fab fa-instagram",
+      "description": "Mening kundalik hayotim va ish jarayonlarim.",
+      "color": "pink",
+      "active": true,
+      "sublinks": [
+        {
+          "title": "Dasturchi Husan",
+          "url": "https://instagram.com/dasturchi_husan",
+          "icon": "fab fa-instagram"
+        },
+        {
+          "title": "Dasturchi AI",
+          "url": "https://instagram.com/dasturchi__ai",
+          "icon": "fas fa-robot"
+        }
+      ]
+    },
+    {
+      "title": "GitHub Portfolio",
+      "url": "#",
+      "icon": "fab fa-github",
+      "description": "Ochiq kodli loyihalarim va kodlarim.",
+      "color": "gray",
+      "active": false
+    },
+    {
+      "title": "YouTube Kurslarim",
+      "url": "#",
+      "icon": "fab fa-youtube",
+      "description": "Video darsliklar va master-klasslar.",
+      "color": "red",
+      "active": false
+    },
+    {
+      "title": "Shaxsiy Veb-saytim",
+      "url": "#",
+      "icon": "fas fa-globe",
+      "description": "Mening blogim va xizmatlarim.",
+      "color": "green",
+      "active": false
+    }
+  ]
+}
