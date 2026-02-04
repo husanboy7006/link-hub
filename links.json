@@ -1,16 +1,8 @@
 {
   "name": "Dasturchi Husan",
-  "bio": "Python o'rganuvchisi va AI qiziquvchisiman. Bu yerda mening ilk loyihalarim va ijtimoiy tarmoqlardagi sahifalarim jamlangan.",
+  "bio": "Assalomu alaykum! Men dasturlash olamiga yangi kirib keldim. Bu sahifada o'rganayotgan narsalarim va kichik ishlarimni joylab boraman.",
   "profile_image": "static/profile_logo.png",
   "links": [
-    {
-      "title": "Telegram Kanalim",
-      "url": "#",
-      "icon": "fab fa-telegram",
-      "description": "Eng so'nggi yangiliklar va foydali postlar.",
-      "color": "blue",
-      "active": false
-    },
     {
       "title": "Instagram",
       "url": "#",
@@ -33,26 +25,38 @@
     },
     {
       "title": "GitHub Portfolio",
-      "url": "#",
+      "url": "https://github.com/husanboy7006",
       "icon": "fab fa-github",
       "description": "Ochiq kodli loyihalarim va kodlarim.",
       "color": "gray",
-      "active": false
+      "active": true
     },
     {
-      "title": "YouTube Kurslarim",
+      "title": "Soff.uz",
       "url": "#",
-      "icon": "fab fa-youtube",
-      "description": "Video darsliklar va master-klasslar.",
+      "icon": "fas fa-shopping-bag",
+      "description": "Raqamli mahsulotlar va xizmatlar platformasi.",
       "color": "red",
-      "active": false
+      "active": true,
+      "sublinks": [
+        {
+          "title": "Soff.uz",
+          "url": "https://soff.uz",
+          "icon": "fas fa-home"
+        },
+        {
+          "title": "Mahsulotlar",
+          "url": "https://seller.soff.uz/seller/products",
+          "icon": "fas fa-box-open"
+        }
+      ]
     },
     {
-      "title": "Shaxsiy Veb-saytim",
+      "title": "Telegram Kanalim",
       "url": "#",
-      "icon": "fas fa-globe",
-      "description": "Mening blogim va xizmatlarim.",
-      "color": "green",
+      "icon": "fab fa-telegram",
+      "description": "Eng so'nggi yangiliklar va foydali postlar.",
+      "color": "blue",
       "active": false
     }
   ]
