@@ -1,11 +1,16 @@
 import json
+import os
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
 def load_data():
     try:
-        with open('links.json', 'r') as f:
+        # Use absolute path to ensure file is found in Vercel environment
+        base_path = os.path.dirname(os.path.abspath(__file__))
+        data_path = os.path.join(base_path, 'links.json')
+        
+        with open(data_path, 'r') as f:
             return json.load(f)
     except FileNotFoundError:
         return {
