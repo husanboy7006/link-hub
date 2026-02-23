@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Dasturchi Husan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #fff;
+        }
+
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid #a855f7;
+            border-radius: 16px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            background: var(--card-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--text-color);
+            flex-shrink: 0;
+        }
+
+        .project-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .project-link {
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .project-link i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-link i {
+            transform: translateX(3px);
+        }
+
+        .arrow-icon {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .project-card:hover .arrow-icon {
+            color: var(--text-color);
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- Left Column: Profile -->
+        <aside class="profile-card">
+            <div class="img-container">
+                <img src="{{ url_for('static', filename='profile_logo.png') }}" alt="{{ data.name }}"
+                    class="profile-img"
+                    onerror="this.src='https://ui-avatars.com/api/?name={{ data.name|urlencode }}&background=10b981&color=fff&size=200'">
+            </div>
+            <h1 class="name">{{ data.name }}</h1>
+            <p class="role">Dasturlashni O'rganuvchi</p>
+        </aside>
+
+        <!-- Right Column: Projects -->
+        <main class="content-area">
+            <a href="/" class="back-button">
+                <i class="fas fa-arrow-left"></i> Orqaga qaytish
+            </a>
+
+            <div class="section-title">Mening Loyihalarim</div>
+
+            <div class="portfolio-grid">
+                {% for project in projects %}
+                <a href="{{ project.link }}" class="project-card">
+                    <div class="project-icon">
+                        <i class="{{ project.icon }}"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-desc">{{ project.description }}</p>
+                        <div class="project-link">
+                            Batafsil <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right arrow-icon"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>
