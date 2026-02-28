@@ -35,7 +35,9 @@ def portfolio():
             "link": "https://lendingpeaj-crm.vercel.app",
             "github_link": "https://github.com/husanboy7006/lendingpeaj-crm",
             "category": "web",
-            "icon": "fas fa-magnet"
+            "icon": "fas fa-magnet",
+            "tech_stack": ["HTML5", "CSS3", "JS"],
+            "features": "Responsive, SEO optimized, Animation"
         },
         {
             "title": "CVV APP (Redesign)",
@@ -43,7 +45,9 @@ def portfolio():
             "link": "https://marketing-hisobot.vercel.app",
             "github_link": "https://github.com/husanboy7006/marketing-hisobot",
             "category": "crm",
-            "icon": "fas fa-vector-square"
+            "icon": "fas fa-vector-square",
+            "tech_stack": ["React", "Gatsby", "Tailwind"],
+            "features": "Dark mode, Charts, Modern UI"
         },
         {
             "title": "Reja App",
@@ -51,7 +55,9 @@ def portfolio():
             "link": "https://rejaflow.onrender.com",
             "github_link": "https://github.com/husanboy7006/rejaflow",
             "category": "crm",
-            "icon": "fas fa-bullseye"
+            "icon": "fas fa-bullseye",
+            "tech_stack": ["Node.js", "Express", "MongoDB"],
+            "features": "Auth, CRUD, Goal tracking"
         },
         {
             "title": "Telegram Mini App",
@@ -59,7 +65,9 @@ def portfolio():
             "link": "https://telegram-shop-epas.onrender.com",
             "github_link": "https://github.com/husanboy7006/telegram-shop",
             "category": "bot",
-            "icon": "fab fa-telegram"
+            "icon": "fab fa-telegram",
+            "tech_stack": ["Telegraf", "Node.js", "WebApp"],
+            "features": "Telegram API, Payment integration"
         },
         {
             "title": "Aksessuar CRM",
@@ -67,7 +75,9 @@ def portfolio():
             "link": "https://aksessuar-crm.onrender.com",
             "github_link": "https://github.com/husanboy7006/milliaamorsklad-CRM",
             "category": "crm",
-            "icon": "fas fa-gem"
+            "icon": "fas fa-gem",
+            "tech_stack": ["Flask", "PostgreSQL", "Jinja2"],
+            "features": "Inventory, Sales, Role system"
         }
     ]
     return render_template('portfolio.html', data=data, projects=projects)

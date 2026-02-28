@@ -1,6 +1,6 @@
 {
   "name": "Dasturchi Husan",
-  "bio": "Assalomu alaykum! Men dasturlash olamiga yangi kirib keldim. Bu sahifada o'rganayotgan narsalarim va kichik ishlarimni joylab boraman.",
+  "bio": "Zamonaviy web-saytlar, web-ilovalar, Telegram botlar va raqamli tizimlar ishlab chiquvchi dasturchi. Amaliy loyihalarim, demo versiyalarim va ochiq kodlarim bilan tanishishingiz mumkin.",
   "profile_image": "static/profile_logo.png",
   "links": [
     {
@@ -53,11 +53,11 @@
     },
     {
       "title": "Telegram Kanalim",
-      "url": "#",
+      "url": "https://t.me/Dasturchi_Husan",
       "icon": "fab fa-telegram",
       "description": "Eng so'nggi yangiliklar va foydali postlar.",
       "color": "blue",
-      "active": false
+      "active": true
     }
   ]
 }
