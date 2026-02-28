@@ -60,6 +60,14 @@ def portfolio():
             "github_link": "https://github.com/husanboy7006/telegram-shop",
             "category": "bot",
             "icon": "fab fa-telegram"
+        },
+        {
+            "title": "Aksessuar CRM",
+            "description": "Aksessuarlar do'koni uchun yaratilgan maxsus CRM va boshqaruv tizimi.",
+            "link": "https://aksessuar-crm.onrender.com",
+            "github_link": "https://github.com/husanboy7006/milliaamorsklad-CRM",
+            "category": "crm",
+            "icon": "fas fa-gem"
         }
     ]
     return render_template('portfolio.html', data=data, projects=projects)
