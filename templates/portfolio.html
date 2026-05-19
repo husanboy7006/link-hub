@@ -36,10 +36,7 @@
         }
 
         @media (max-width: 900px) {
-            .profile-card {
-                position: relative;
-                top: 0;
-            }
+            .profile-card { position: relative; top: 0; }
         }
 
         .bio {
@@ -47,6 +44,48 @@
             font-size: 0.95rem;
             line-height: 1.7;
             margin-top: 1.5rem;
+        }
+
+        /* Spinning gradient ring */
+        @keyframes spinRing { to { transform: rotate(360deg); } }
+        @keyframes nameShimmer { to { background-position: -200% center; } }
+
+        .img-container {
+            background: #080312 !important;
+            padding: 3px !important;
+            overflow: hidden !important;
+            box-shadow: 0 0 50px rgba(168,85,247,0.35) !important;
+            transition: box-shadow 0.4s ease !important;
+        }
+        .img-container::before {
+            content: '';
+            position: absolute;
+            inset: -100%;
+            background: conic-gradient(
+                from 0deg,
+                #a855f7  0%, #818cf8 20%, #38bdf8 40%,
+                #34d399 60%, #f472b6 80%, #a855f7 100%
+            );
+            animation: spinRing 3.5s linear infinite;
+            z-index: 0;
+        }
+        .profile-img {
+            position: relative !important;
+            z-index: 1 !important;
+            background: #080312 !important;
+        }
+        .name {
+            background: linear-gradient(90deg, #fff 0%, #c084fc 35%, #818cf8 60%, #fff 100%) !important;
+            background-size: 200% auto !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            animation: nameShimmer 5s linear infinite !important;
+        }
+        .project-card:hover {
+            box-shadow:
+                0 14px 40px rgba(0,0,0,0.35),
+                0 0 0 1px rgba(168,85,247,0.3) !important;
         }
 
         .back-button {
@@ -338,6 +377,11 @@
         </main>
 
     </div>
+
+    <footer class="minimal-footer" style="max-width:1000px;width:100%;text-align:center;padding:2rem 0;margin-top:4rem;color:rgba(255,255,255,0.35);font-size:0.9rem;border-top:1px solid rgba(255,255,255,0.06);letter-spacing:0.5px;">
+        &copy; 2026 Dasturchi Husan.
+    </footer>
+
     <script>
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');

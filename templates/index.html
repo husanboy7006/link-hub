@@ -6,82 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dasturchi Husan | Web Ilovalar & Tizimlar</title>
     <meta name="description"
-        content="Zamonaviy web-saytlar, web-ilovalar, Telegram botlar va raqamli tizimlar ishlab chiquvchi dasturchi Husanning shaxsiy sahifasi.">
-    <meta name="keywords" content="Dasturchi Husan, web dasturchi, portfolio, telegram bot, CRM, web ilovalar">
+        content="Zamonaviy web-saytlar, web-ilovalar, Telegram botlar va raqamli tizimlar ishlab chiquvchi dasturchi.">
+    <meta name="keywords" content="Dasturchi Husan, web dasturchi, portfolio, telegram bot, CRM">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dasturchihusan.uz/">
-    <meta property="og:title" content="Dasturchi Husan | Personal Link Hub">
-    <meta property="og:description"
-        content="Zamonaviy web-saytlar, web-ilovalar va raqamli tizimlar ishlab chiquvchi dasturchi. Mening loyihalarim bilan tanishing.">
-    <meta property="og:image" content="static/profile_logo.png">
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://dasturchihusan.uz/">
+    <meta property="og:title"       content="Dasturchi Husan | Personal Link Hub">
+    <meta property="og:description" content="Zamonaviy web-saytlar va raqamli tizimlar ishlab chiquvchi dasturchi.">
+    <meta property="og:image"       content="https://dasturchihusan.uz/static/profile_logo.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://dasturchihusan.uz/">
-    <meta property="twitter:title" content="Dasturchi Husan | Personal Link Hub">
-    <meta property="twitter:description"
-        content="Zamonaviy web-saytlar, web-ilovalar va raqamli tizimlar ishlab chiquvchi dasturchi. Mening loyihalarim bilan tanishing.">
-    <meta property="twitter:image" content="static/profile_logo.png">
+    <meta property="twitter:card"        content="summary_large_image">
+    <meta property="twitter:url"         content="https://dasturchihusan.uz/">
+    <meta property="twitter:title"       content="Dasturchi Husan | Personal Link Hub">
+    <meta property="twitter:description" content="Zamonaviy web-saytlar va raqamli tizimlar ishlab chiquvchi dasturchi.">
+    <meta property="twitter:image"       content="https://dasturchihusan.uz/static/profile_logo.png">
 
     <meta name="google-site-verification" content="NhWya0u_rsimHzfX1E3pA2zqWMeTMIDWI_PMGlJEkpc" />
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="icon" type="image/png" href="static/favicon.png">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon"       type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
+
+    <!-- Custom cursor (desktop only) -->
+    <div class="cur-dot"  id="curDot"></div>
+    <div class="cur-ring" id="curRing"></div>
+
     <div class="grid-container">
-        <!-- Left Column: Profile -->
-        <aside class="profile-card">
+        <!-- Left: Profile Card -->
+        <aside class="profile-card" id="profileCard">
             <div class="img-container">
-                <img src="static/profile_logo.png" alt="Dasturchi Husan" class="profile-img"
-                    onerror="this.src='https://ui-avatars.com/api/?name=Dasturchi+Husan&background=10b981&color=fff&size=200'">
+                <img src="{{ url_for('static', filename='profile_logo.png') }}"
+                     alt="Dasturchi Husan" class="profile-img"
+                     onerror="this.src='https://ui-avatars.com/api/?name=Dasturchi+Husan&background=7e22ce&color=fff&size=200'">
             </div>
             <h1 class="name">Dasturchi Husan</h1>
             <p class="role">WEB ILOVALAR DASTURCHISI</p>
-
             <p class="bio">
                 Zamonaviy web-saytlar, web-ilovalar, Telegram botlar va raqamli tizimlar ishlab chiquvchi dasturchi.
                 Amaliy loyihalarim, demo versiyalarim va ochiq kodlarim bilan tanishishingiz mumkin.
             </p>
-
             <div class="cta-group">
-                <a href="https://t.me/Dasturchi_Husan" class="btn-cta btn-primary" target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://t.me/Dasturchi_Husan" class="btn-cta btn-primary"
+                   target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-paper-plane"></i> Bog'lanish
                 </a>
                 <a href="/portfolio" class="btn-cta btn-secondary">
                     <i class="fas fa-laptop-code"></i> Portfolio
                 </a>
             </div>
-
-            <p class="role" style="font-size: 0.8rem; margin-bottom: 0.5rem; opacity: 0.7; margin-top: auto;">Mening
-                tarmoqlarim</p>
+            <p class="role" style="font-size:.78rem;margin-bottom:.5rem;opacity:.55;margin-top:auto;">
+                Mening tarmoqlarim
+            </p>
             <div class="social-bar">
-                <a href="https://instagram.com/dasturchi_husan" class="social-icon" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://github.com/husanboy7006" class="social-icon" target="_blank"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://t.me/Dasturchi_Husan" class="social-icon" target="_blank"><i
-                        class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/dasturchi_husan" class="social-icon"
+                   target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/husanboy7006" class="social-icon"
+                   target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/Dasturchi_Husan" class="social-icon"
+                   target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i></a>
             </div>
         </aside>
 
-        <!-- Right Column: Links Grid -->
+        <!-- Right: Links Grid -->
         <main class="content-area">
             <div class="section-title">Mening Havolalarim</div>
-
             <div class="links-grid">
-                <!-- Instagram (Folder) -->
+
+                <!-- Instagram -->
                 <a href="javascript:void(0)" class="grid-item"
-                    onclick='openModal({"title":"Instagram","icon":"fab fa-instagram","sublinks":[{"title":"Dasturchi Husan","url":"https://instagram.com/dasturchi_husan","icon":"fab fa-instagram"},{"title":"Dasturchi AI","url":"https://instagram.com/dasturchi__ai","icon":"fas fa-robot"}]})'>
-                    <div class="card-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
+                   onclick='openModal({"title":"Instagram","icon":"fab fa-instagram","sublinks":[{"title":"Dasturchi Husan","url":"https://instagram.com/dasturchi_husan","icon":"fab fa-instagram"},{"title":"Dasturchi AI","url":"https://instagram.com/dasturchi__ai","icon":"fas fa-robot"}]})'>
+                    <div class="card-icon"><i class="fab fa-instagram"></i></div>
                     <div class="card-bottom">
                         <h3>Instagram</h3>
                         <p>Mening kundalik hayotim va ish jarayonlarim.</p>
@@ -89,10 +88,9 @@
                 </a>
 
                 <!-- GitHub -->
-                <a href="https://github.com/husanboy7006" class="grid-item" target="_blank" rel="noopener noreferrer">
-                    <div class="card-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
+                <a href="https://github.com/husanboy7006" class="grid-item"
+                   target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon"><i class="fab fa-github"></i></div>
                     <div class="card-bottom">
                         <h3>GitHub Portfolio</h3>
                         <p>Ochiq kodli loyihalarim va kodlarim.</p>
@@ -100,23 +98,19 @@
                     <i class="fas fa-arrow-right arrow-icon"></i>
                 </a>
 
-                <!-- Soff.uz (Folder) -->
+                <!-- Soff.uz -->
                 <a href="javascript:void(0)" class="grid-item"
-                    onclick='openModal({"title":"Soff.uz","icon":"fas fa-shopping-bag","sublinks":[{"title":"Soff.uz","url":"https://soff.uz","icon":"fas fa-home"},{"title":"Mahsulotlar","url":"https://seller.soff.uz/seller/products","icon":"fas fa-box-open"}]})'>
-                    <div class="card-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
+                   onclick='openModal({"title":"Soff.uz","icon":"fas fa-shopping-bag","sublinks":[{"title":"Soff.uz","url":"https://soff.uz","icon":"fas fa-home"},{"title":"Mahsulotlar","url":"https://seller.soff.uz/seller/products","icon":"fas fa-box-open"}]})'>
+                    <div class="card-icon"><i class="fas fa-shopping-bag"></i></div>
                     <div class="card-bottom">
                         <h3>Soff.uz</h3>
                         <p>Raqamli mahsulotlar va xizmatlar platformasi.</p>
                     </div>
                 </a>
 
-                <!-- Portfolio (New) -->
+                <!-- Portfolio -->
                 <a href="/portfolio" class="grid-item">
-                    <div class="card-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
                     <div class="card-bottom">
                         <h3>Portfolio</h3>
                         <p>Mening shaxsiy portfolio saytim.</p>
@@ -124,91 +118,302 @@
                     <i class="fas fa-arrow-right arrow-icon"></i>
                 </a>
 
-                <!-- Telegram (Coming Soon) -->
-                <a href="#" class="grid-item disabled">
-                    <div class="badge-soon">Tez orada</div>
-                    <div class="card-icon">
-                        <i class="fab fa-telegram"></i>
-                    </div>
+                <!-- Telegram -->
+                <a href="https://t.me/Dasturchi_Husan" class="grid-item"
+                   target="_blank" rel="noopener noreferrer">
+                    <div class="card-icon"><i class="fab fa-telegram"></i></div>
                     <div class="card-bottom">
                         <h3>Telegram Kanalim</h3>
                         <p>Eng so'nggi yangiliklar va foydali postlar.</p>
                     </div>
+                    <i class="fas fa-arrow-right arrow-icon"></i>
                 </a>
+
             </div>
         </main>
-
     </div>
 
-    <!-- Minimal Footer -->
-    <footer class="minimal-footer">
-        &copy; 2026 Dasturchi Husan.
-    </footer>
+    <footer class="minimal-footer">&copy; 2026 Dasturchi Husan.</footer>
 
-    <!-- Modal Structure -->
+    <!-- Modal -->
     <div class="modal-overlay" id="linkModal" onclick="closeModal(event)">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-title">
-                    <i id="modalIcon" class=""></i>
+                    <i id="modalIcon"></i>
                     <span id="modalTitle">Title</span>
                 </div>
                 <button class="modal-close" onclick="closeModal(event, true)">&times;</button>
             </div>
-            <div id="modalLinks" class="modal-body">
-                <!-- Sublinks will be injected here -->
-            </div>
+            <div id="modalLinks" class="modal-body"></div>
         </div>
     </div>
 
     <script>
-        function openModal(linkData) {
-            const modal = document.getElementById('linkModal');
-            const title = document.getElementById('modalTitle');
-            const icon = document.getElementById('modalIcon');
-            const linksContainer = document.getElementById('modalLinks');
+    /* ═══════════════════════════════════════
+       MODAL
+    ═══════════════════════════════════════ */
+    function openModal(d) {
+        document.getElementById('modalTitle').textContent = d.title;
+        document.getElementById('modalIcon').className   = d.icon;
+        const box = document.getElementById('modalLinks');
+        box.innerHTML = '';
+        (d.sublinks || []).forEach(s => {
+            const a   = document.createElement('a');
+            a.className = 'sublink-item';
+            a.href      = s.url;
+            a.target    = '_blank';
+            a.rel       = 'noopener noreferrer';
+            const safeIcon  = (s.icon  || 'fas fa-link').replace(/[^a-z0-9\-\s]/gi, '');
+            const safeTitle = document.createTextNode(s.title || '');
+            a.innerHTML = `<div class="sublink-icon"><i class="${safeIcon}"></i></div>`;
+            const sp = document.createElement('span');
+            sp.className = 'sublink-text';
+            sp.appendChild(safeTitle);
+            a.appendChild(sp);
+            box.appendChild(a);
+        });
+        const m = document.getElementById('linkModal');
+        m.style.display = 'flex';
+        setTimeout(() => m.classList.add('active'), 10);
+    }
 
-            // Setup Header
-            title.textContent = linkData.title;
-            icon.className = linkData.icon;
+    function closeModal(e, force = false) {
+        if (force || e.target === document.getElementById('linkModal')) {
+            const m = document.getElementById('linkModal');
+            m.classList.remove('active');
+            setTimeout(() => { m.style.display = 'none'; }, 340);
+        }
+    }
 
-            // Clear previous links
-            linksContainer.innerHTML = '';
+    /* ═══════════════════════════════════════
+       CUSTOM CURSOR (desktop only)
+    ═══════════════════════════════════════ */
+    (function () {
+        if (!window.matchMedia('(hover: hover)').matches) return;
 
-            // Add new links
-            if (linkData.sublinks) {
-                linkData.sublinks.forEach(sub => {
-                    const a = document.createElement('a');
-                    a.className = 'sublink-item';
-                    a.href = sub.url;
-                    a.target = '_blank';
+        const dot  = document.getElementById('curDot');
+        const ring = document.getElementById('curRing');
+        let mx = -100, my = -100, rx = -100, ry = -100;
 
-                    a.innerHTML = `
-                        <div class="sublink-icon"><i class="${sub.icon || 'fas fa-link'}"></i></div>
-                        <span class="sublink-text">${sub.title}</span>
-                    `;
-                    linksContainer.appendChild(a);
-                });
-            }
+        document.addEventListener('mousemove', e => {
+            mx = e.clientX;
+            my = e.clientY;
+            dot.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+        });
 
-            // Show Modal
-            modal.style.display = 'flex';
-            // Small delay for animation
-            setTimeout(() => {
-                modal.classList.add('active');
-            }, 10);
+        (function animRing() {
+            rx += (mx - rx) * 0.13;
+            ry += (my - ry) * 0.13;
+            ring.style.transform = `translate(${rx - 17}px, ${ry - 17}px)`;
+            requestAnimationFrame(animRing);
+        })();
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => { dot.classList.add('big'); ring.classList.add('big'); });
+            el.addEventListener('mouseleave', () => { dot.classList.remove('big'); ring.classList.remove('big'); });
+        });
+    })();
+
+    /* ═══════════════════════════════════════
+       CARD EFFECTS: 3D TILT + HOLO + GLOW
+    ═══════════════════════════════════════ */
+    document.querySelectorAll('.grid-item:not(.disabled)').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r  = card.getBoundingClientRect();
+            const x  = e.clientX - r.left;
+            const y  = e.clientY - r.top;
+            const cx = r.width  / 2;
+            const cy = r.height / 2;
+
+            // 3D tilt
+            const tX = ((y - cy) / cy) * -7;
+            const tY = ((x - cx) / cx) *  7;
+            card.style.transform =
+                `perspective(900px) rotateX(${tX}deg) rotateY(${tY}deg) translateY(-7px)`;
+
+            // Holographic hue from mouse angle
+            const hue = Math.round(Math.atan2(y - cy, x - cx) * (180 / Math.PI) + 200);
+
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+            card.style.setProperty('--holo-hue', hue);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+            card.style.setProperty('--mouse-x', '-999px');
+            card.style.setProperty('--mouse-y', '-999px');
+        });
+
+        /* Sparkle burst on click */
+        card.addEventListener('click', e => {
+            const r = card.getBoundingClientRect();
+            spawnSparkles(card, e.clientX - r.left, e.clientY - r.top, 8);
+        });
+
+        /* Occasional sparkle on hover enter */
+        card.addEventListener('mouseenter', e => {
+            const r = card.getBoundingClientRect();
+            spawnSparkles(card, e.clientX - r.left, e.clientY - r.top, 4);
+        });
+    });
+
+    function spawnSparkles(parent, cx, cy, count) {
+        for (let i = 0; i < count; i++) {
+            const sp = document.createElement('div');
+            sp.className = 'sparkle';
+            const angle = (Math.PI * 2 * i) / count + Math.random();
+            const dist  = 20 + Math.random() * 30;
+            const sx    = Math.cos(angle) * dist;
+            const sy    = Math.sin(angle) * dist;
+            sp.style.left = `${cx}px`;
+            sp.style.top  = `${cy}px`;
+            sp.style.setProperty('--sx', `${sx}px`);
+            sp.style.setProperty('--sy', `${sy}px`);
+            sp.style.width  = `${3 + Math.random() * 4}px`;
+            sp.style.height = sp.style.width;
+            sp.style.background = `hsl(${Math.random() * 80 + 240}, 100%, 75%)`;
+            parent.appendChild(sp);
+            setTimeout(() => sp.remove(), 700);
+        }
+    }
+
+    /* ═══════════════════════════════════════
+       PROFILE CARD 3D TILT
+    ═══════════════════════════════════════ */
+    (function () {
+        const card = document.getElementById('profileCard');
+        if (!card) return;
+        card.addEventListener('mousemove', e => {
+            const r  = card.getBoundingClientRect();
+            const x  = (e.clientX - r.left) / r.width;
+            const y  = (e.clientY - r.top)  / r.height;
+            const tX = (y - 0.5) * -8;
+            const tY = (x - 0.5) *  8;
+            card.style.transform = `perspective(900px) rotateX(${tX}deg) rotateY(${tY}deg)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    })();
+
+    /* ═══════════════════════════════════════
+       FLOATING PARTICLES
+    ═══════════════════════════════════════ */
+    (function () {
+        const canvas = document.createElement('canvas');
+        canvas.style.cssText =
+            'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;';
+        document.body.insertBefore(canvas, document.body.firstChild);
+        const ctx = canvas.getContext('2d');
+        let W, H;
+
+        function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const COLORS = ['168,85,247', '129,140,248', '56,189,248', '244,114,182', '52,211,153'];
+        const COUNT  = W < 768 ? 40 : 90;
+
+        const dots = Array.from({ length: COUNT }, (_, i) => ({
+            x:  Math.random() * window.innerWidth,
+            y:  Math.random() * window.innerHeight,
+            r:  Math.random() * 1.6 + 0.2,
+            vx: (Math.random() - 0.5) * 0.22,
+            vy: -(Math.random() * 0.38 + 0.08),
+            a:  Math.random() * 0.38 + 0.06,
+            c:  COLORS[i % COLORS.length],
+            // Rare bright dot
+            bright: Math.random() < 0.06,
+        }));
+
+        let t = 0;
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+            t += 0.01;
+            dots.forEach(d => {
+                const pulse = d.bright ? (0.5 + 0.5 * Math.sin(t * 3 + d.x)) : 1;
+                const r     = d.bright ? d.r * 2.5 * pulse : d.r;
+                ctx.beginPath();
+                ctx.arc(d.x, d.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${d.c},${d.a * pulse})`;
+                ctx.fill();
+                if (d.bright) {
+                    ctx.beginPath();
+                    ctx.arc(d.x, d.y, r * 3, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${d.c},${d.a * 0.12 * pulse})`;
+                    ctx.fill();
+                }
+                d.x += d.vx; d.y += d.vy;
+                if (d.y < -5)    { d.y = H + 5; d.x = Math.random() * W; }
+                if (d.x < -5)    d.x = W + 5;
+                if (d.x > W + 5) d.x = -5;
+            });
+            requestAnimationFrame(draw);
+        }
+        draw();
+    })();
+
+    /* ═══════════════════════════════════════
+       SHOOTING STARS
+    ═══════════════════════════════════════ */
+    (function () {
+        function shoot() {
+            const star   = document.createElement('div');
+            star.className = 'shooting-star';
+            const top    = 5  + Math.random() * 55;  /* upper portion */
+            const left   = -5 + Math.random() * 60;
+            const angle  = -20 - Math.random() * 25; /* deg, downward-right */
+            const length = 140 + Math.random() * 120;
+            const dur    = 700 + Math.random() * 600;
+
+            star.style.cssText += `
+                top:${top}%; left:${left}%;
+                width:${length}px;
+                transform: rotate(${angle}deg) scaleX(0);
+                opacity: 0;
+            `;
+            document.body.appendChild(star);
+
+            star.animate([
+                { transform: `rotate(${angle}deg) scaleX(0)`, opacity: 0            },
+                { transform: `rotate(${angle}deg) scaleX(1)`, opacity: 1, offset: 0.15 },
+                { transform: `rotate(${angle}deg) scaleX(1) translateX(${length * 2.5}px)`, opacity: 0 }
+            ], { duration: dur, easing: 'ease-in' }).onfinish = () => star.remove();
         }
 
-        function closeModal(event, force = false) {
-            if (force || event.target === document.getElementById('linkModal')) {
-                const modal = document.getElementById('linkModal');
-                modal.classList.remove('active');
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
+        /* Fire 1-2 stars on load, then random interval */
+        setTimeout(shoot, 800);
+        setTimeout(shoot, 2200);
+        setInterval(() => { if (Math.random() > 0.45) shoot(); }, 3500);
+    })();
+
+    /* ═══════════════════════════════════════
+       AURORA ORB — MOUSE PARALLAX
+    ═══════════════════════════════════════ */
+    (function () {
+        /* Extra cyan orb */
+        const orb = document.createElement('div');
+        orb.style.cssText = [
+            'position:fixed', 'border-radius:50%', 'pointer-events:none', 'z-index:-1',
+            'width:42vw', 'height:42vw', 'bottom:12%', 'left:34%',
+            'background:radial-gradient(circle,rgba(6,182,212,0.25),transparent 70%)',
+            'filter:blur(85px)',
+            'transition:transform 2s ease',
+        ].join(';');
+        document.body.appendChild(orb);
+
+        /* Slow parallax on mouse */
+        let lastX = 0, lastY = 0;
+        document.addEventListener('mousemove', e => {
+            const dx = (e.clientX / window.innerWidth  - 0.5) * 30;
+            const dy = (e.clientY / window.innerHeight - 0.5) * 30;
+            if (Math.abs(dx - lastX) > 0.5 || Math.abs(dy - lastY) > 0.5) {
+                orb.style.transform       = `translate(${dx}px, ${dy}px)`;
+                document.body.style.backgroundPositionX = `${50 + dx * 0.1}%`;
+                lastX = dx; lastY = dy;
             }
-        }
+        });
+    })();
     </script>
 </body>
-
 </html>
